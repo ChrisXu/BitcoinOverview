@@ -9,18 +9,30 @@
 import Foundation
 
 /// Current supported currencies
-enum Currency: String, Codable {
+enum Currency: String {
     
-    case EUR
-    case USD
-    case GBP
+    case eur = "EUR"
+    case usd = "USD"
+    case gbp = "GBP"
+    case unsupported
+    
+    static let allValues: [Currency] = [.eur, .usd, .gbp]
+    
+    init(rawValue: String) {
+        switch rawValue {
+        case Currency.eur.rawValue: self = .eur
+        case Currency.usd.rawValue: self = .usd
+        case Currency.gbp.rawValue: self = .gbp
+        default: self = .unsupported
+        }
+    }
 }
 
-struct Price: Codable { 
+struct Price { 
     
-    let price: Double
+    let rate: Double
     
-    let updatedTimeInterval: TimeInterval
-    
+    let date: Date
+        
     let currency: Currency
 }

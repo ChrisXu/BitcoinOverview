@@ -12,9 +12,17 @@
 		A8E4075A226205DE003F03A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E40758226205DE003F03A2 /* Main.storyboard */; };
 		A8E4075C226205E0003F03A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8E4075B226205E0003F03A2 /* Assets.xcassets */; };
 		A8E4075F226205E0003F03A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E4075D226205E0003F03A2 /* LaunchScreen.storyboard */; };
-		A8E4076A226205E0003F03A2 /* BitcoinOverviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40769226205E0003F03A2 /* BitcoinOverviewTests.swift */; };
 		A8E40775226205E0003F03A2 /* BitcoinOverviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40774226205E0003F03A2 /* BitcoinOverviewUITests.swift */; };
 		A8E407872262082B003F03A2 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407862262082B003F03A2 /* Price.swift */; };
+		A8E4078A22620C33003F03A2 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078922620C33003F03A2 /* Backend.swift */; };
+		A8E4078C22621593003F03A2 /* PricePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078B22621593003F03A2 /* PricePresenter.swift */; };
+		A8E4078E226215CA003F03A2 /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078D226215CA003F03A2 /* PriceService.swift */; };
+		A8E4079122621954003F03A2 /* RestfulBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079022621954003F03A2 /* RestfulBackend.swift */; };
+		A8E40796226240C3003F03A2 /* DateFormatter+Coindesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */; };
+		A8E40798226274ED003F03A2 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40797226274ED003F03A2 /* DateRange.swift */; };
+		A8E4079B2262769A003F03A2 /* DateRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079A2262769A003F03A2 /* DateRangeTests.swift */; };
+		A8E4079D22627959003F03A2 /* MockBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079C22627959003F03A2 /* MockBackend.swift */; };
+		A8E4079F22627A04003F03A2 /* PriceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079E22627A04003F03A2 /* PriceServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +51,20 @@
 		A8E4075E226205E0003F03A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8E40760226205E0003F03A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E40765226205E0003F03A2 /* BitcoinOverviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinOverviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8E40769226205E0003F03A2 /* BitcoinOverviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinOverviewTests.swift; sourceTree = "<group>"; };
 		A8E4076B226205E0003F03A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E40770226205E0003F03A2 /* BitcoinOverviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinOverviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E40774226205E0003F03A2 /* BitcoinOverviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinOverviewUITests.swift; sourceTree = "<group>"; };
 		A8E40776226205E0003F03A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E407862262082B003F03A2 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		A8E4078922620C33003F03A2 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		A8E4078B22621593003F03A2 /* PricePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePresenter.swift; sourceTree = "<group>"; };
+		A8E4078D226215CA003F03A2 /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
+		A8E4079022621954003F03A2 /* RestfulBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestfulBackend.swift; sourceTree = "<group>"; };
+		A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Coindesk.swift"; sourceTree = "<group>"; };
+		A8E40797226274ED003F03A2 /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
+		A8E4079A2262769A003F03A2 /* DateRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangeTests.swift; sourceTree = "<group>"; };
+		A8E4079C22627959003F03A2 /* MockBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBackend.swift; sourceTree = "<group>"; };
+		A8E4079E22627A04003F03A2 /* PriceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				A8E40754226205DE003F03A2 /* AppDelegate.swift */,
+				A8E407942262402A003F03A2 /* Utilities */,
+				A8E4078822620C11003F03A2 /* Protocol */,
+				A8E4078F226215D9003F03A2 /* Service */,
 				A8E40785226207FF003F03A2 /* Presenter */,
 				A8E40784226207F5003F03A2 /* View */,
 				A8E40783226207E3003F03A2 /* ViewController */,
@@ -115,8 +134,10 @@
 		A8E40768226205E0003F03A2 /* BitcoinOverviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8E40769226205E0003F03A2 /* BitcoinOverviewTests.swift */,
+				A8E407992262766B003F03A2 /* Mock */,
 				A8E4076B226205E0003F03A2 /* Info.plist */,
+				A8E4079A2262769A003F03A2 /* DateRangeTests.swift */,
+				A8E4079E22627A04003F03A2 /* PriceServiceTests.swift */,
 			);
 			path = BitcoinOverviewTests;
 			sourceTree = "<group>";
@@ -156,8 +177,51 @@
 		A8E40785226207FF003F03A2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A8E4078B22621593003F03A2 /* PricePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A8E4078822620C11003F03A2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A8E4078922620C33003F03A2 /* Backend.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A8E4078F226215D9003F03A2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A8E4079022621954003F03A2 /* RestfulBackend.swift */,
+				A8E4078D226215CA003F03A2 /* PriceService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A8E407942262402A003F03A2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */,
+				A8E40797226274ED003F03A2 /* DateRange.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A8E407992262766B003F03A2 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A8E407A022627C5C003F03A2 /* MockData */,
+				A8E4079C22627959003F03A2 /* MockBackend.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		A8E407A022627C5C003F03A2 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +295,7 @@
 					};
 					A8E40764226205E0003F03A2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = A8E40750226205DE003F03A2;
 					};
 					A8E4076F226205E0003F03A2 = {
@@ -291,7 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E4078A22620C33003F03A2 /* Backend.swift in Sources */,
 				A8E40757226205DE003F03A2 /* ViewController.swift in Sources */,
+				A8E40796226240C3003F03A2 /* DateFormatter+Coindesk.swift in Sources */,
+				A8E4078C22621593003F03A2 /* PricePresenter.swift in Sources */,
+				A8E4078E226215CA003F03A2 /* PriceService.swift in Sources */,
+				A8E40798226274ED003F03A2 /* DateRange.swift in Sources */,
+				A8E4079122621954003F03A2 /* RestfulBackend.swift in Sources */,
 				A8E40755226205DE003F03A2 /* AppDelegate.swift in Sources */,
 				A8E407872262082B003F03A2 /* Price.swift in Sources */,
 			);
@@ -301,7 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8E4076A226205E0003F03A2 /* BitcoinOverviewTests.swift in Sources */,
+				A8E4079D22627959003F03A2 /* MockBackend.swift in Sources */,
+				A8E4079F22627A04003F03A2 /* PriceServiceTests.swift in Sources */,
+				A8E4079B2262769A003F03A2 /* DateRangeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +580,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L63ERV4LN9;
 				INFOPLIST_FILE = BitcoinOverviewTests/Info.plist;
@@ -517,6 +591,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cxcreation.BitcoinOverviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitcoinOverview.app/BitcoinOverview";
@@ -528,6 +603,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L63ERV4LN9;
 				INFOPLIST_FILE = BitcoinOverviewTests/Info.plist;
