@@ -189,7 +189,7 @@ struct CurrentPriceParser: Parsing {
     }
 }
 
-extension Price {
+private extension Price {
     init(json: [String: Any], date: Date) throws {
         
         guard let rate = json["rate"] as? Double else {

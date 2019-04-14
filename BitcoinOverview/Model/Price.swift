@@ -35,4 +35,10 @@ struct Price {
     let date: Date
         
     let currency: Currency
+    
+    init(rate: Double, date: Date, currency: Currency) {
+        self.rate = rate
+        self.date = date
+        self.currency = currency
+    }
 }
