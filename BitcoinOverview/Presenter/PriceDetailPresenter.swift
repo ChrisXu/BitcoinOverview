@@ -25,9 +25,9 @@ open class HistoricalPriceDetailPresenter: PriceDetailPresentable {
     
     private(set) public var currecies = Currency.allValues
     
-    private var priceMap = [Currency: Price]()
+    fileprivate var priceMap = [Currency: Price]()
     private let backend: Backend
-    private let service: PriceService
+    fileprivate let service: PriceService
     
     init(backend: Backend, date: Date) {
         self.backend = backend
@@ -69,5 +69,41 @@ open class HistoricalPriceDetailPresenter: PriceDetailPresentable {
         
         let formatter = NumberFormatter.default(for: price.currency)
         return formatter.string(from: NSNumber(value: price.rate))
+    }
+}
+
+
+class CurrentPriceDetailPresenter: HistoricalPriceDetailPresenter {
+    
+    private var currentPriceUpdatingHandler: ((Currency, Error?) -> Void)?
+    private var currentPriceUpdatingTimer: Timer?
+    override func reloadPrices(completion: ((Currency, Error?) -> Void)?) {
+        
+        currentPriceUpdatingTimer?.invalidate()
+        currentPriceUpdatingTimer = nil
+        
+        currentPriceUpdatingHandler = completion
+        
+        currentPriceUpdatingTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+            
+            guard let strongSelf = self else { return }
+            
+            let service = strongSelf.service
+            let updatingHandler = strongSelf.currentPriceUpdatingHandler
+            
+            strongSelf.currecies.forEach { currency in
+                service.refreshCurrentPrice(for: currency) { result in
+                    
+                    switch result {
+                    case .success(let price):
+                        strongSelf.priceMap[currency] = price
+                        updatingHandler?(currency, nil)
+                    case .failure(let error):
+                        updatingHandler?(currency, error)
+                    }
+                }
+            }
+        }
+        currentPriceUpdatingTimer?.fire()
     }
 }

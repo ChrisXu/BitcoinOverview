@@ -14,7 +14,7 @@ public protocol PriceListPresentable {
     
     func reloadHistoricalPrices(completion: ((Error?) -> Void)?)
     
-    func refreshCurrentPrice(completion: ((Error?) -> Void)?)
+    func scheduleUpdatingCurrentPrice(withTimeInterval interval: TimeInterval, updatingHandler: ((Error?) -> Void)?)
     
     func numberOfHistoricalPrices() -> Int
     
@@ -60,20 +60,35 @@ open class PriceListPresenter: PriceListPresentable {
         }
     }
     
-    public func refreshCurrentPrice(completion: ((Error?) -> Void)?) {
+    private var currentPriceUpdatingHandler: ((Error?) -> Void)?
+    private var currentPriceUpdatingTimer: Timer?
+    public func scheduleUpdatingCurrentPrice(withTimeInterval interval: TimeInterval = 60, updatingHandler: ((Error?) -> Void)?) {
         
-        service.refreshCurrentPrice(for: currency) { [weak self] result in
+        currentPriceUpdatingTimer?.invalidate()
+        currentPriceUpdatingTimer = nil
+        
+        currentPriceUpdatingHandler = updatingHandler
+        
+        currentPriceUpdatingTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] _ in
             
             guard let strongSelf = self else { return }
             
-            switch result {
-            case .success(let price):
-                strongSelf.currentPrice = price
-                completion?(nil)
-            case .failure(let error):
-                completion?(error)
+            let service = strongSelf.service
+            let currency = strongSelf.currency
+            let updatingHandler = strongSelf.currentPriceUpdatingHandler
+            
+            service.refreshCurrentPrice(for: currency) { result in
+                
+                switch result {
+                case .success(let price):
+                    strongSelf.currentPrice = price
+                    updatingHandler?(nil)
+                case .failure(let error):
+                    updatingHandler?(error)
+                }
             }
         }
+        currentPriceUpdatingTimer?.fire()
     }
     
     public func numberOfHistoricalPrices() -> Int {
@@ -114,14 +129,12 @@ open class PriceListPresenter: PriceListPresentable {
             guard let price = historicalPrice(at: index) else {
                 return nil
             }
-            
             return HistoricalPriceDetailPresenter(backend: backend, date: price.date)
         } else {
             guard let price = currentPrice else {
                 return nil
             }
-            
-            return HistoricalPriceDetailPresenter(backend: backend, date: price.date)
+            return CurrentPriceDetailPresenter(backend: backend, date: price.date)
         }
     }
     

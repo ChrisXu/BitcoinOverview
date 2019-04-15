@@ -61,7 +61,6 @@ final class PriceDetailViewController: UIViewController {
             let priceView = PriceView()
             priceView.accessibilityIdentifier = "PriceDetailViewController.priceView.\(currency.rawValue)"
             priceView.currencyLabel.text = currency.rawValue
-            priceView.rateLabel.showLoading(withColor: UIColor(hexString: "#21B7C1"), activityIndicatorStyle: .white)
             stackView.addArrangedSubview(priceView)
             NSLayoutConstraint.activate([
                 priceView.heightAnchor.constraint(equalToConstant: 74),
@@ -72,6 +71,8 @@ final class PriceDetailViewController: UIViewController {
     }
     
     private func fetchPrices() {
+        
+        priceViewMap.values.forEach { $0.rateLabel.showLoading(withColor: UIColor(hexString: "#21B7C1"), activityIndicatorStyle: .white) }
         
         presenter.reloadPrices { [weak self] (currency, error) in
             

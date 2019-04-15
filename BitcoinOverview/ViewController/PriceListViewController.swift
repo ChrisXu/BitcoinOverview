@@ -35,7 +35,7 @@ class PriceListViewController: UIViewController {
         addCurrentPriceButton()
         
         reloadHistoricalPrices()
-        refreshCurrentPrice()
+        scheduleUpdatingCurrentPrice()
     }
     
     // MARK: - Public methods
@@ -57,9 +57,9 @@ class PriceListViewController: UIViewController {
         }
     }
     
-    func refreshCurrentPrice() {
+    func scheduleUpdatingCurrentPrice() {
         
-        presenter.refreshCurrentPrice { [weak self] error in
+        presenter.scheduleUpdatingCurrentPrice(withTimeInterval: 60) { [weak self] error in
             DispatchQueue.main.async {
                 
                 if error != nil {
@@ -155,6 +155,7 @@ class PriceListViewController: UIViewController {
             currentPriceButton.alpha = validScale
             view.bringSubviewToFront(collectionView)
         } else {
+            currentPriceButton.alpha = 1
             view.bringSubviewToFront(currentPriceButton)
         }
         
