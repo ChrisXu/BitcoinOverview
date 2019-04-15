@@ -192,8 +192,8 @@ struct CurrentPriceParser: Parsing {
 private extension Price {
     init(json: [String: Any], date: Date) throws {
         
-        guard let rate = json["rate"] as? Double else {
-            throw ParserError.missing("rate")
+        guard let rate = json["rate_float"] as? Double else {
+            throw ParserError.missing("rate_float")
         }
         
         guard let code = json["code"] as? String else {

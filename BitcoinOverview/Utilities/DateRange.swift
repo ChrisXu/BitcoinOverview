@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct DateRange {
+internal struct DateRange {
     
-    /// default returns the range between today and 14 days before
+    /// default returns the range for the past 14 days
     static let `default`: DateRange = {
         
-        let endDate = Date()
-        let startDate = Calendar.current.date(byAdding: .day, value: -14, to: endDate)! // [TODO] Remove forced unwrapping
+        let endDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())! 
+        let startDate = Calendar.current.date(byAdding: .day, value: -14, to: Date())! // [TODO] Remove forced unwrapping
         return DateRange(start: startDate, end: endDate)
     }()
     

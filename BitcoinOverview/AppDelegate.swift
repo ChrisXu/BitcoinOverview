@@ -12,10 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let window = UIWindow(frame: UIScreen.main.bounds)
+    
+    let backend = RestfulBackend()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let priceListViewController = PriceListViewController()
+        let presenter = PriceListPresenter(backend: backend)
+        let priceListViewController = PriceListViewController(presenter: presenter)
         let rootViewController = UINavigationController(rootViewController: priceListViewController)
         
         window.rootViewController = rootViewController
@@ -30,7 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureNavigationBar() {
         UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().barTintColor = UIColor(hexString: "#38B5CA")
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }
 

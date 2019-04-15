@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PricePresentable {
+public protocol PriceListPresentable {
     
     var currency: Currency { get }
     
@@ -21,11 +21,15 @@ protocol PricePresentable {
     func dateTextOfHistoricalPrice(at index: Int) -> String?
     
     func rateTextOfHistoricalPrice(at index: Int) -> String?
+    
+    func textForCurrentPrice() -> String?
+    
+    func presenterForDetail(at index: Int?) -> PriceDetailPresentable?
 }
 
-open class PricePresenter: PricePresentable {
+open class PriceListPresenter: PriceListPresentable {
     
-    var currency: Currency = .eur
+    public var currency: Currency = .eur
     
     private let backend: Backend
     private let service: PriceService
@@ -38,9 +42,9 @@ open class PricePresenter: PricePresentable {
         self.service = PriceService(backend: backend)
     }
     
-    // MARK: - PricePresentable
+    // MARK: - PriceListPresentable
     
-    func reloadHistoricalPrices(completion: ((Error?) -> Void)?) {
+    public func reloadHistoricalPrices(completion: ((Error?) -> Void)?) {
         
         service.fetchHistoricalPrices(for: currency) { [weak self] result in
             
@@ -56,7 +60,7 @@ open class PricePresenter: PricePresentable {
         }
     }
     
-    func refreshCurrentPrice(completion: ((Error?) -> Void)?) {
+    public func refreshCurrentPrice(completion: ((Error?) -> Void)?) {
         
         service.refreshCurrentPrice(for: currency) { [weak self] result in
             
@@ -72,17 +76,13 @@ open class PricePresenter: PricePresentable {
         }
     }
     
-    func numberOfHistoricalPrices() -> Int {
+    public func numberOfHistoricalPrices() -> Int {
         return historicalPrices.count
     }
     
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d"
-        return formatter
-    }()
+    private let dateFormatter = DateFormatter.default() // Avoid creating duplicated instances
     
-    func dateTextOfHistoricalPrice(at index: Int) -> String? {
+    public func dateTextOfHistoricalPrice(at index: Int) -> String? {
         guard let price = historicalPrice(at: index) else {
             return nil
         }
@@ -90,17 +90,39 @@ open class PricePresenter: PricePresentable {
         return dateFormatter.string(from: price.date)
     }
     
-    func rateTextOfHistoricalPrice(at index: Int) -> String? {
+    public func rateTextOfHistoricalPrice(at index: Int) -> String? {
         guard let price = historicalPrice(at: index) else {
             return nil
         }
         
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 2
-        formatter.currencyCode = price.currency.rawValue
-        
+        let formatter = NumberFormatter.default(for: price.currency)
         return formatter.string(from: NSNumber(value: price.rate))
+    }
+    
+    public func textForCurrentPrice() -> String? {
+        guard let price = currentPrice else {
+            return nil
+        }
+        
+        let formatter = NumberFormatter.default(for: price.currency)
+        return formatter.string(from: NSNumber(value: price.rate))
+    }
+    
+    public func presenterForDetail(at index: Int?) -> PriceDetailPresentable? {
+        
+        if let index = index {
+            guard let price = historicalPrice(at: index) else {
+                return nil
+            }
+            
+            return HistoricalPriceDetailPresenter(backend: backend, date: price.date)
+        } else {
+            guard let price = currentPrice else {
+                return nil
+            }
+            
+            return HistoricalPriceDetailPresenter(backend: backend, date: price.date)
+        }
     }
     
     // MARK: - Private methods

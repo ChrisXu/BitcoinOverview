@@ -14,7 +14,7 @@
 		A8E40775226205E0003F03A2 /* BitcoinOverviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40774226205E0003F03A2 /* BitcoinOverviewUITests.swift */; };
 		A8E407872262082B003F03A2 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407862262082B003F03A2 /* Price.swift */; };
 		A8E4078A22620C33003F03A2 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078922620C33003F03A2 /* Backend.swift */; };
-		A8E4078C22621593003F03A2 /* PricePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078B22621593003F03A2 /* PricePresenter.swift */; };
+		A8E4078C22621593003F03A2 /* PriceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078B22621593003F03A2 /* PriceListPresenter.swift */; };
 		A8E4078E226215CA003F03A2 /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078D226215CA003F03A2 /* PriceService.swift */; };
 		A8E4079122621954003F03A2 /* RestfulBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079022621954003F03A2 /* RestfulBackend.swift */; };
 		A8E40796226240C3003F03A2 /* DateFormatter+Coindesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */; };
@@ -26,6 +26,11 @@
 		A8E407A6226364F5003F03A2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407A5226364F5003F03A2 /* Reusable.swift */; };
 		A8E407A82263685C003F03A2 /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407A72263685C003F03A2 /* UIColor+HEX.swift */; };
 		A8E407AA22639ACD003F03A2 /* LoadingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407A922639ACD003F03A2 /* LoadingPresentable.swift */; };
+		A8E407AC2263BF5B003F03A2 /* PriceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407AB2263BF5B003F03A2 /* PriceDetailViewController.swift */; };
+		A8E407AE2263C2BF003F03A2 /* PriceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407AD2263C2BF003F03A2 /* PriceDetailPresenter.swift */; };
+		A8E407B02263CA7F003F03A2 /* NumberFormatter+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407AF2263CA7F003F03A2 /* NumberFormatter+Default.swift */; };
+		A8E407B22263CB60003F03A2 /* DateFormatter+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407B12263CB60003F03A2 /* DateFormatter+Default.swift */; };
+		A8E407B422644F65003F03A2 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407B322644F65003F03A2 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +64,7 @@
 		A8E40776226205E0003F03A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E407862262082B003F03A2 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		A8E4078922620C33003F03A2 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
-		A8E4078B22621593003F03A2 /* PricePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePresenter.swift; sourceTree = "<group>"; };
+		A8E4078B22621593003F03A2 /* PriceListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListPresenter.swift; sourceTree = "<group>"; };
 		A8E4078D226215CA003F03A2 /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
 		A8E4079022621954003F03A2 /* RestfulBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestfulBackend.swift; sourceTree = "<group>"; };
 		A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Coindesk.swift"; sourceTree = "<group>"; };
@@ -71,6 +76,11 @@
 		A8E407A5226364F5003F03A2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A8E407A72263685C003F03A2 /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
 		A8E407A922639ACD003F03A2 /* LoadingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresentable.swift; sourceTree = "<group>"; };
+		A8E407AB2263BF5B003F03A2 /* PriceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDetailViewController.swift; sourceTree = "<group>"; };
+		A8E407AD2263C2BF003F03A2 /* PriceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDetailPresenter.swift; sourceTree = "<group>"; };
+		A8E407AF2263CA7F003F03A2 /* NumberFormatter+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Default.swift"; sourceTree = "<group>"; };
+		A8E407B12263CB60003F03A2 /* DateFormatter+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Default.swift"; sourceTree = "<group>"; };
+		A8E407B322644F65003F03A2 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				A8E407862262082B003F03A2 /* Price.swift */,
+				A8E407B322644F65003F03A2 /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				A8E40756226205DE003F03A2 /* PriceListViewController.swift */,
+				A8E407AB2263BF5B003F03A2 /* PriceDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -183,7 +195,8 @@
 		A8E40785226207FF003F03A2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				A8E4078B22621593003F03A2 /* PricePresenter.swift */,
+				A8E4078B22621593003F03A2 /* PriceListPresenter.swift */,
+				A8E407AD2263C2BF003F03A2 /* PriceDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -212,6 +225,8 @@
 			children = (
 				A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */,
 				A8E407A72263685C003F03A2 /* UIColor+HEX.swift */,
+				A8E407AF2263CA7F003F03A2 /* NumberFormatter+Default.swift */,
+				A8E407B12263CB60003F03A2 /* DateFormatter+Default.swift */,
 				A8E40797226274ED003F03A2 /* DateRange.swift */,
 			);
 			path = Utilities;
@@ -364,16 +379,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E407B422644F65003F03A2 /* Currency.swift in Sources */,
+				A8E407B22263CB60003F03A2 /* DateFormatter+Default.swift in Sources */,
 				A8E4078A22620C33003F03A2 /* Backend.swift in Sources */,
 				A8E407A82263685C003F03A2 /* UIColor+HEX.swift in Sources */,
 				A8E407A6226364F5003F03A2 /* Reusable.swift in Sources */,
 				A8E40757226205DE003F03A2 /* PriceListViewController.swift in Sources */,
 				A8E40796226240C3003F03A2 /* DateFormatter+Coindesk.swift in Sources */,
 				A8E407A4226364DC003F03A2 /* PriceCollectionViewCell.swift in Sources */,
-				A8E4078C22621593003F03A2 /* PricePresenter.swift in Sources */,
+				A8E4078C22621593003F03A2 /* PriceListPresenter.swift in Sources */,
+				A8E407AC2263BF5B003F03A2 /* PriceDetailViewController.swift in Sources */,
+				A8E407AE2263C2BF003F03A2 /* PriceDetailPresenter.swift in Sources */,
 				A8E4078E226215CA003F03A2 /* PriceService.swift in Sources */,
 				A8E40798226274ED003F03A2 /* DateRange.swift in Sources */,
 				A8E407AA22639ACD003F03A2 /* LoadingPresentable.swift in Sources */,
+				A8E407B02263CA7F003F03A2 /* NumberFormatter+Default.swift in Sources */,
 				A8E4079122621954003F03A2 /* RestfulBackend.swift in Sources */,
 				A8E40755226205DE003F03A2 /* AppDelegate.swift in Sources */,
 				A8E407872262082B003F03A2 /* Price.swift in Sources */,

@@ -30,6 +30,14 @@ class PriceCollectionViewCell: UICollectionViewCell, Reusable {
         addShadow()
     }
     
+    override var isHighlighted: Bool{
+        didSet{
+            UIView.animate(withDuration: 0.2) {
+                self.alpha = self.isHighlighted ? 0.7 : 1.0
+            }
+        }
+    }
+    
     // MARK: - Private methods
     
     private func setUp() {
@@ -60,6 +68,7 @@ class PriceCollectionViewCell: UICollectionViewCell, Reusable {
     
     private func addDateLabel() {
         dateLabel = UILabel()
+        dateLabel.accessibilityIdentifier = "PriceCollectionViewCell.dateLabel"
         dateLabel.textColor = UIColor(hexString: "#525252")
         dateLabel.font = UIFont.systemFont(ofSize: 24, weight: .medium)
         dateLabel.textAlignment = .left
@@ -76,6 +85,7 @@ class PriceCollectionViewCell: UICollectionViewCell, Reusable {
     
     private func addRateLabel() {
         rateLabel = UILabel()
+        rateLabel.accessibilityIdentifier = "PriceCollectionViewCell.rateLabel"
         rateLabel.textColor = UIColor(hexString: "#1B1B1B")
         rateLabel.font = UIFont.systemFont(ofSize: 22, weight: .regular)
         rateLabel.textAlignment = .right
