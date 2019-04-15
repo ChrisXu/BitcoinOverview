@@ -62,7 +62,7 @@ class PriceListViewController: UIViewController {
         presenter.refreshCurrentPrice { [weak self] error in
             DispatchQueue.main.async {
                 
-                if let _ = error {
+                if error != nil {
                     self?.currentPriceButton.setTitle("😵", for: .normal)
                     self?.currentPriceButton.isEnabled = false
                 } else {

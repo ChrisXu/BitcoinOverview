@@ -52,10 +52,7 @@ class PriceCollectionViewCell: UICollectionViewCell, Reusable {
         
         if shadowLayer == nil {
             shadowLayer = CAShapeLayer()
-            
-            shadowLayer.path = UIBezierPath(roundedRect: contentView.bounds, cornerRadius: 4).cgPath
             shadowLayer.fillColor = UIColor.white.cgColor
-            
             shadowLayer.shadowColor = UIColor.black.cgColor
             shadowLayer.shadowPath = shadowLayer.path
             shadowLayer.shadowOffset = CGSize(width: 1.0, height: 1.0)
@@ -64,6 +61,7 @@ class PriceCollectionViewCell: UICollectionViewCell, Reusable {
             
             contentView.layer.insertSublayer(shadowLayer, at: 0)
         }
+        shadowLayer.path = UIBezierPath(roundedRect: contentView.bounds, cornerRadius: 4).cgPath
     }
     
     private func addDateLabel() {
@@ -92,8 +90,11 @@ class PriceCollectionViewCell: UICollectionViewCell, Reusable {
         
         contentView.addSubview(rateLabel)
         rateLabel.translatesAutoresizingMaskIntoConstraints = false
+        rateLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
+        let leadingConstraint = rateLabel.leadingAnchor.constraint(equalTo: dateLabel.trailingAnchor, constant: 16)
+        leadingConstraint.priority = UILayoutPriority.defaultLow
         NSLayoutConstraint.activate([
-            rateLabel.leadingAnchor.constraint(equalTo: dateLabel.trailingAnchor, constant: 16),
+            leadingConstraint,
             rateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             rateLabel.heightAnchor.constraint(equalToConstant: 24),
             rateLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
