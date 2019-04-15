@@ -44,6 +44,10 @@
 		A8E407D322651623003F03A2 /* DateFormatter+Coindesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */; };
 		A8E407D422651CEF003F03A2 /* NumberFormatter+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407AF2263CA7F003F03A2 /* NumberFormatter+Default.swift */; };
 		A8E407D5226520FD003F03A2 /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407A72263685C003F03A2 /* UIColor+HEX.swift */; };
+		A8E407D722652229003F03A2 /* PriceListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407D622652228003F03A2 /* PriceListPresenterTests.swift */; };
+		A8E407D922652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407D822652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift */; };
+		A8E407DB2265227D003F03A2 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407DA2265227D003F03A2 /* PriceView.swift */; };
+		A8E407DD226522CB003F03A2 /* PriceListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407DC226522CB003F03A2 /* PriceListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +124,10 @@
 		A8E407C0226514B8003F03A2 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A8E407C3226514B8003F03A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A8E407C5226514B8003F03A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8E407D622652228003F03A2 /* PriceListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListPresenterTests.swift; sourceTree = "<group>"; };
+		A8E407D822652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPriceDetailPresenterTests.swift; sourceTree = "<group>"; };
+		A8E407DA2265227D003F03A2 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		A8E407DC226522CB003F03A2 /* PriceListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,10 +207,13 @@
 		A8E40768226205E0003F03A2 /* BitcoinOverviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8E407992262766B003F03A2 /* Mock */,
 				A8E4076B226205E0003F03A2 /* Info.plist */,
+				A8E407992262766B003F03A2 /* Mock */,
 				A8E4079A2262769A003F03A2 /* DateRangeTests.swift */,
 				A8E4079E22627A04003F03A2 /* PriceServiceTests.swift */,
+				A8E407D622652228003F03A2 /* PriceListPresenterTests.swift */,
+				A8E407D822652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift */,
+				A8E407DC226522CB003F03A2 /* PriceListViewControllerTests.swift */,
 			);
 			path = BitcoinOverviewTests;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				A8E407A3226364DC003F03A2 /* PriceCollectionViewCell.swift */,
+				A8E407DA2265227D003F03A2 /* PriceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,17 +297,9 @@
 		A8E407992262766B003F03A2 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				A8E407A022627C5C003F03A2 /* MockData */,
 				A8E4079C22627959003F03A2 /* MockBackend.swift */,
 			);
 			path = Mock;
-			sourceTree = "<group>";
-		};
-		A8E407A022627C5C003F03A2 /* MockData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MockData;
 			sourceTree = "<group>";
 		};
 		A8E407BC226514B8003F03A2 /* Frameworks */ = {
@@ -493,6 +497,7 @@
 				A8E40798226274ED003F03A2 /* DateRange.swift in Sources */,
 				A8E407AA22639ACD003F03A2 /* LoadingPresentable.swift in Sources */,
 				A8E407B02263CA7F003F03A2 /* NumberFormatter+Default.swift in Sources */,
+				A8E407DB2265227D003F03A2 /* PriceView.swift in Sources */,
 				A8E4079122621954003F03A2 /* RestfulBackend.swift in Sources */,
 				A8E40755226205DE003F03A2 /* AppDelegate.swift in Sources */,
 				A8E407872262082B003F03A2 /* Price.swift in Sources */,
@@ -505,6 +510,9 @@
 			files = (
 				A8E4079D22627959003F03A2 /* MockBackend.swift in Sources */,
 				A8E4079F22627A04003F03A2 /* PriceServiceTests.swift in Sources */,
+				A8E407DD226522CB003F03A2 /* PriceListViewControllerTests.swift in Sources */,
+				A8E407D922652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift in Sources */,
+				A8E407D722652229003F03A2 /* PriceListPresenterTests.swift in Sources */,
 				A8E4079B2262769A003F03A2 /* DateRangeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

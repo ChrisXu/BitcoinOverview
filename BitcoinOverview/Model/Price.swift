@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Price { 
+struct Price: Equatable {
     
     let rate: Double
     
@@ -20,5 +20,9 @@ struct Price {
         self.rate = rate
         self.date = date
         self.currency = currency
+    }
+    
+    public static func == (lhs: Price, rhs: Price) -> Bool {
+        return (lhs.rate == rhs.rate) && (lhs.date == rhs.date) && (lhs.currency == rhs.currency)
     }
 }
