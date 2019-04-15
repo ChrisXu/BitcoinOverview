@@ -10,20 +10,51 @@ import Foundation
 
 public protocol PriceListPresentable {
     
+    /// The currency that will be using for requests
     var currency: Currency { get }
     
+    /// This will reload the historical prices
+    ///
+    /// - Parameter completion: callback when it's finished
+    /// - Returns: the error if the operation can not be completed
     func reloadHistoricalPrices(completion: ((Error?) -> Void)?)
     
+    /// This will refresh and schedule updating current price periodically
+    ///
+    /// - Parameters:
+    ///   - interval: the number of seconds between updatings of the current price
+    ///   - updatingHandler: the handler that will be called repeatedly
+    /// - Returns: the error if the operation can not be completed
     func scheduleUpdatingCurrentPrice(withTimeInterval interval: TimeInterval, updatingHandler: ((Error?) -> Void)?)
     
+    /// Returns a number of historical prices
+    ///
+    /// - Returns: A integer
     func numberOfHistoricalPrices() -> Int
     
+    /// Returns the text for the date by the given index
+    ///
+    /// - Parameter index: An index of the historical price
+    /// - Returns: A string that is formatted accordingly
     func dateTextOfHistoricalPrice(at index: Int) -> String?
     
+    /// Returns the text for the rate by the given index
+    ///
+    /// - Parameter index: An index of the historical price
+    /// - Returns: A string that is formatted accordingly
     func rateTextOfHistoricalPrice(at index: Int) -> String?
     
+    /// Returns the latest text for the current price
+    ///
+    /// - Returns: A string that is formatted accordingly
     func textForCurrentPrice() -> String?
     
+    /// Returns a presenter that conforms to `PriceDetailPresentable` by the given index
+    ///
+    /// If index is not provided, it will return the presenter for the detail of the current price.
+    /// Otherwise, it will return the presenter for the detail of the historical price
+    /// - Parameter index: An index of the historical price
+    /// - Returns: A presenter
     func presenterForDetail(at index: Int?) -> PriceDetailPresentable?
 }
 

@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let window = UIWindow(frame: UIScreen.main.bounds)
     
-    let backend = RestfulBackend()
+    let backend: Backend = isUITesting ? MockBackend() : RestfulBackend()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -37,5 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor(hexString: "#38B5CA")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
+}
+
+private var isUITesting: Bool {
+    let environment = ProcessInfo.processInfo.environment
+    
+    guard let value = environment["isUITest"] else {
+        return false
+    }
+    return Bool(value) ?? false
 }
 

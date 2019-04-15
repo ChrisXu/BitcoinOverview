@@ -56,7 +56,6 @@ final class PriceService {
         }
     }
     
-    
     /// This will return the current price for the given currency
     ///
     /// - Parameters:

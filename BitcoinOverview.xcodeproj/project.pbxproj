@@ -20,7 +20,6 @@
 		A8E40796226240C3003F03A2 /* DateFormatter+Coindesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */; };
 		A8E40798226274ED003F03A2 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40797226274ED003F03A2 /* DateRange.swift */; };
 		A8E4079B2262769A003F03A2 /* DateRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079A2262769A003F03A2 /* DateRangeTests.swift */; };
-		A8E4079D22627959003F03A2 /* MockBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079C22627959003F03A2 /* MockBackend.swift */; };
 		A8E4079F22627A04003F03A2 /* PriceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079E22627A04003F03A2 /* PriceServiceTests.swift */; };
 		A8E407A4226364DC003F03A2 /* PriceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407A3226364DC003F03A2 /* PriceCollectionViewCell.swift */; };
 		A8E407A6226364F5003F03A2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407A5226364F5003F03A2 /* Reusable.swift */; };
@@ -48,6 +47,7 @@
 		A8E407D922652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407D822652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift */; };
 		A8E407DB2265227D003F03A2 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407DA2265227D003F03A2 /* PriceView.swift */; };
 		A8E407DD226522CB003F03A2 /* PriceListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407DC226522CB003F03A2 /* PriceListViewControllerTests.swift */; };
+		A8E407DF22653A81003F03A2 /* MockBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079C22627959003F03A2 /* MockBackend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +198,7 @@
 				A8E40783226207E3003F03A2 /* ViewController */,
 				A8E40782226207D9003F03A2 /* Model */,
 				A8E4075B226205E0003F03A2 /* Assets.xcassets */,
+				A8E407DE22653A45003F03A2 /* Mock */,
 				A8E4075D226205E0003F03A2 /* LaunchScreen.storyboard */,
 				A8E40760226205E0003F03A2 /* Info.plist */,
 			);
@@ -208,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				A8E4076B226205E0003F03A2 /* Info.plist */,
-				A8E407992262766B003F03A2 /* Mock */,
 				A8E4079A2262769A003F03A2 /* DateRangeTests.swift */,
 				A8E4079E22627A04003F03A2 /* PriceServiceTests.swift */,
 				A8E407D622652228003F03A2 /* PriceListPresenterTests.swift */,
@@ -294,14 +294,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		A8E407992262766B003F03A2 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				A8E4079C22627959003F03A2 /* MockBackend.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
 		A8E407BC226514B8003F03A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +310,14 @@
 				A8E407C5226514B8003F03A2 /* Info.plist */,
 			);
 			path = "BitcoinOverview-Today";
+			sourceTree = "<group>";
+		};
+		A8E407DE22653A45003F03A2 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A8E4079C22627959003F03A2 /* MockBackend.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +484,7 @@
 			files = (
 				A8E407B422644F65003F03A2 /* Currency.swift in Sources */,
 				A8E407B22263CB60003F03A2 /* DateFormatter+Default.swift in Sources */,
+				A8E407DF22653A81003F03A2 /* MockBackend.swift in Sources */,
 				A8E4078A22620C33003F03A2 /* Backend.swift in Sources */,
 				A8E407A82263685C003F03A2 /* UIColor+HEX.swift in Sources */,
 				A8E407A6226364F5003F03A2 /* Reusable.swift in Sources */,
@@ -508,7 +509,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8E4079D22627959003F03A2 /* MockBackend.swift in Sources */,
 				A8E4079F22627A04003F03A2 /* PriceServiceTests.swift in Sources */,
 				A8E407DD226522CB003F03A2 /* PriceListViewControllerTests.swift in Sources */,
 				A8E407D922652248003F03A2 /* HistoricalPriceDetailPresenterTests.swift in Sources */,

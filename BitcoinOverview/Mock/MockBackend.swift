@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import BitcoinOverview
 
 class MockBackend: Backend {
     

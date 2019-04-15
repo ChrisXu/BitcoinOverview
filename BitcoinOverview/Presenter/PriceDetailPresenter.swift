@@ -10,12 +10,21 @@ import Foundation
 
 public protocol PriceDetailPresentable {
     
+    /// The date that is showing for the detail
     var date: Date { get }
     
+    /// A array of currencies that will be showing
     var currecies: [Currency] { get }
     
+    /// It will reload the prices for the all of the currecies
+    ///
+    /// - Parameter completion: A callback when the operation is finished
     func reloadPrices(completion: ((Currency, Error?) -> Void)?)
     
+    /// Returns the text for the rate by the given currency
+    ///
+    /// - Parameter curreny: the currency for the rate
+    /// - Returns: A string that is formatted accordingly
     func rateTextOfPrice(for curreny: Currency) -> String?
 }
 
