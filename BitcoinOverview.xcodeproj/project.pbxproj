@@ -31,6 +31,19 @@
 		A8E407B02263CA7F003F03A2 /* NumberFormatter+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407AF2263CA7F003F03A2 /* NumberFormatter+Default.swift */; };
 		A8E407B22263CB60003F03A2 /* DateFormatter+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407B12263CB60003F03A2 /* DateFormatter+Default.swift */; };
 		A8E407B422644F65003F03A2 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407B322644F65003F03A2 /* Currency.swift */; };
+		A8E407BE226514B8003F03A2 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E407BD226514B8003F03A2 /* NotificationCenter.framework */; };
+		A8E407C1226514B8003F03A2 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407C0226514B8003F03A2 /* TodayViewController.swift */; };
+		A8E407C4226514B8003F03A2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E407C2226514B8003F03A2 /* MainInterface.storyboard */; };
+		A8E407C8226514B8003F03A2 /* BitcoinOverview-Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8E407BB226514B8003F03A2 /* BitcoinOverview-Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A8E407CD226515E8003F03A2 /* RestfulBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4079022621954003F03A2 /* RestfulBackend.swift */; };
+		A8E407CE226515ED003F03A2 /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078D226215CA003F03A2 /* PriceService.swift */; };
+		A8E407CF226515FC003F03A2 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E4078922620C33003F03A2 /* Backend.swift */; };
+		A8E407D022651602003F03A2 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407862262082B003F03A2 /* Price.swift */; };
+		A8E407D122651605003F03A2 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407B322644F65003F03A2 /* Currency.swift */; };
+		A8E407D22265161A003F03A2 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40797226274ED003F03A2 /* DateRange.swift */; };
+		A8E407D322651623003F03A2 /* DateFormatter+Coindesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E40795226240C2003F03A2 /* DateFormatter+Coindesk.swift */; };
+		A8E407D422651CEF003F03A2 /* NumberFormatter+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407AF2263CA7F003F03A2 /* NumberFormatter+Default.swift */; };
+		A8E407D5226520FD003F03A2 /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E407A72263685C003F03A2 /* UIColor+HEX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +61,28 @@
 			remoteGlobalIDString = A8E40750226205DE003F03A2;
 			remoteInfo = BitcoinOverview;
 		};
+		A8E407C6226514B8003F03A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8E40749226205DE003F03A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8E407BA226514B8003F03A2;
+			remoteInfo = "BitcoinOverview-Today";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8E407CC226514B8003F03A2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A8E407C8226514B8003F03A2 /* BitcoinOverview-Today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A8E40751226205DE003F03A2 /* BitcoinOverview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinOverview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +115,11 @@
 		A8E407AF2263CA7F003F03A2 /* NumberFormatter+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Default.swift"; sourceTree = "<group>"; };
 		A8E407B12263CB60003F03A2 /* DateFormatter+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Default.swift"; sourceTree = "<group>"; };
 		A8E407B322644F65003F03A2 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		A8E407BB226514B8003F03A2 /* BitcoinOverview-Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BitcoinOverview-Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E407BD226514B8003F03A2 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A8E407C0226514B8003F03A2 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A8E407C3226514B8003F03A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A8E407C5226514B8003F03A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +144,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8E407B8226514B8003F03A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E407BE226514B8003F03A2 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -114,6 +161,8 @@
 				A8E40753226205DE003F03A2 /* BitcoinOverview */,
 				A8E40768226205E0003F03A2 /* BitcoinOverviewTests */,
 				A8E40773226205E0003F03A2 /* BitcoinOverviewUITests */,
+				A8E407BF226514B8003F03A2 /* BitcoinOverview-Today */,
+				A8E407BC226514B8003F03A2 /* Frameworks */,
 				A8E40752226205DE003F03A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,6 +173,7 @@
 				A8E40751226205DE003F03A2 /* BitcoinOverview.app */,
 				A8E40765226205E0003F03A2 /* BitcoinOverviewTests.xctest */,
 				A8E40770226205E0003F03A2 /* BitcoinOverviewUITests.xctest */,
+				A8E407BB226514B8003F03A2 /* BitcoinOverview-Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,6 +298,24 @@
 			path = MockData;
 			sourceTree = "<group>";
 		};
+		A8E407BC226514B8003F03A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8E407BD226514B8003F03A2 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8E407BF226514B8003F03A2 /* BitcoinOverview-Today */ = {
+			isa = PBXGroup;
+			children = (
+				A8E407C0226514B8003F03A2 /* TodayViewController.swift */,
+				A8E407C2226514B8003F03A2 /* MainInterface.storyboard */,
+				A8E407C5226514B8003F03A2 /* Info.plist */,
+			);
+			path = "BitcoinOverview-Today";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,10 +326,12 @@
 				A8E4074D226205DE003F03A2 /* Sources */,
 				A8E4074E226205DE003F03A2 /* Frameworks */,
 				A8E4074F226205DE003F03A2 /* Resources */,
+				A8E407CC226514B8003F03A2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A8E407C7226514B8003F03A2 /* PBXTargetDependency */,
 			);
 			name = BitcoinOverview;
 			productName = BitcoinOverview;
@@ -304,6 +374,23 @@
 			productReference = A8E40770226205E0003F03A2 /* BitcoinOverviewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A8E407BA226514B8003F03A2 /* BitcoinOverview-Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8E407C9226514B8003F03A2 /* Build configuration list for PBXNativeTarget "BitcoinOverview-Today" */;
+			buildPhases = (
+				A8E407B7226514B8003F03A2 /* Sources */,
+				A8E407B8226514B8003F03A2 /* Frameworks */,
+				A8E407B9226514B8003F03A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BitcoinOverview-Today";
+			productName = "BitcoinOverview-Today";
+			productReference = A8E407BB226514B8003F03A2 /* BitcoinOverview-Today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,6 +413,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = A8E40750226205DE003F03A2;
 					};
+					A8E407BA226514B8003F03A2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = A8E4074C226205DE003F03A2 /* Build configuration list for PBXProject "BitcoinOverview" */;
@@ -344,6 +434,7 @@
 				A8E40750226205DE003F03A2 /* BitcoinOverview */,
 				A8E40764226205E0003F03A2 /* BitcoinOverviewTests */,
 				A8E4076F226205E0003F03A2 /* BitcoinOverviewUITests */,
+				A8E407BA226514B8003F03A2 /* BitcoinOverview-Today */,
 			);
 		};
 /* End PBXProject section */
@@ -369,6 +460,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8E407B9226514B8003F03A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E407C4226514B8003F03A2 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +517,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8E407B7226514B8003F03A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E407D122651605003F03A2 /* Currency.swift in Sources */,
+				A8E407D5226520FD003F03A2 /* UIColor+HEX.swift in Sources */,
+				A8E407D22265161A003F03A2 /* DateRange.swift in Sources */,
+				A8E407CF226515FC003F03A2 /* Backend.swift in Sources */,
+				A8E407D422651CEF003F03A2 /* NumberFormatter+Default.swift in Sources */,
+				A8E407CE226515ED003F03A2 /* PriceService.swift in Sources */,
+				A8E407D322651623003F03A2 /* DateFormatter+Coindesk.swift in Sources */,
+				A8E407CD226515E8003F03A2 /* RestfulBackend.swift in Sources */,
+				A8E407D022651602003F03A2 /* Price.swift in Sources */,
+				A8E407C1226514B8003F03A2 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -431,6 +547,11 @@
 			target = A8E40750226205DE003F03A2 /* BitcoinOverview */;
 			targetProxy = A8E40771226205E0003F03A2 /* PBXContainerItemProxy */;
 		};
+		A8E407C7226514B8003F03A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8E407BA226514B8003F03A2 /* BitcoinOverview-Today */;
+			targetProxy = A8E407C6226514B8003F03A2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -440,6 +561,14 @@
 				A8E4075E226205E0003F03A2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A8E407C2226514B8003F03A2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8E407C3226514B8003F03A2 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -564,6 +693,7 @@
 		A8E4077A226205E0003F03A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -583,6 +713,7 @@
 		A8E4077B226205E0003F03A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -684,6 +815,44 @@
 			};
 			name = Release;
 		};
+		A8E407CA226514B8003F03A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "BitcoinOverview-Today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxcreation.BitcoinOverview.BitcoinOverview-Today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8E407CB226514B8003F03A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "BitcoinOverview-Today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxcreation.BitcoinOverview.BitcoinOverview-Today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -719,6 +888,15 @@
 			buildConfigurations = (
 				A8E40780226205E0003F03A2 /* Debug */,
 				A8E40781226205E0003F03A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8E407C9226514B8003F03A2 /* Build configuration list for PBXNativeTarget "BitcoinOverview-Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8E407CA226514B8003F03A2 /* Debug */,
+				A8E407CB226514B8003F03A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
