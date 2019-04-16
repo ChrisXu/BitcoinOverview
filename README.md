@@ -4,9 +4,9 @@
 
 This project follows the MVP pattern which holds a nice balance between trade-offs in terms of testability, readability, and speed for development.
 
-*Model* - The pure logic components
-*View* - The instances for logic relating to the UI and user interaction.
-*Presenter* - The instances for logic relating to the certain business case.
+- *Model* - The pure logic components
+- *View* - The instances for logic relating to the UI and user interaction.
+- *Presenter* - The instances for logic relating to the certain business case.
 
 *protocol-oriented programming* as a key concept in Swift, it plays an important role in the project. `Presentable` is the contract between view and presenter. In other words, the view knows nothing about the actual classes of the presenter (and models).  As long as it gets a corresponding instance of  `Presentable`, it will just work.
 
