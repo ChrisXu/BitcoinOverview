@@ -12,7 +12,7 @@ class PriceListViewController: UIViewController {
     
     lazy var presenter: PriceListPresentable! = nil
     
-    private var collectionView: UICollectionView! = nil
+    private(set) var collectionView: UICollectionView! = nil
     private let collectionViewLayout = CollectionViewLayout()
     
     private var currentPriceButton: UIButton! = nil
@@ -75,7 +75,8 @@ class PriceListViewController: UIViewController {
     }
     
     func handle(_ error: Error) {
-        
+        // [TODO]: Show message of error to users
+        // "Oops, something went south"
     }
     
     // MARK: - Private methods
